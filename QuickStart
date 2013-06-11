@@ -1,0 +1,46 @@
+QuickStart
+----------
+
+* Clonar el repositorio en donde esta el scaffold del proyecto
+  (usando git)
+  $> git clone git@github.com:fbrusatti/inmo.git
+
+  o
+
+  (usando http)
+  $> git clone https://github.com/fbrusatti/inmo.git
+
+  o
+
+  forkear el proyecto en github
+
+* Reconfigurar el origin repository para que apunte a un repositorio del alumno
+  $> git remote set-url origin git://new.url.here
+
+* Crear la base de datos en mysql llamada inmoapp_development
+
+  (ejemplo usando mysql client)
+  $> mysql -u root -p
+  (mysql)> create database inmoapp_development;
+
+* Crear las tablas de la base de datos
+
+  (ejemplo, desde el directorio raíz del proyecto)
+  $> mysql -u root -p inmoapp_development < config/schema.sql
+
+  (Nota: Cada vez que se necesite crear una nueva tabla se tendrá que incluir
+         el SQL necesario en el archivo config/schema.sql)
+
+* Correr la test suite
+
+  $> mvn test
+
+* Crear una versión del proyecto
+
+  $> mvn package
+
+* Correr el proyecto
+
+  $>./run.sh
+
+Suerte a todos.
