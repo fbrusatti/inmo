@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.javalite.test.jspec.JSpec.the;
+import static org.junit.Assert.*;
 
 public class UserSpec{
 

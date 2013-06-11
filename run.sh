@@ -10,4 +10,6 @@ for file in `ls target/dependency`; do export CLASSPATH=$CLASSPATH:target/depend
 export CLASSPATH=$CLASSPATH:target/classes
 
 echo "*******************  EXECUTING PROGRAM******************************************"
-java -cp $CLASSPATH -Dactivejdbc.log com.unrc.app.Inmo
+# java -cp $CLASSPATH -Dactivejdbc.log com.unrc.app.Inmo
+
+mvn compile exec:java -Dexec.mainClass=com.unrc.app.Inmo
